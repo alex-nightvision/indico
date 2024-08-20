@@ -1,0 +1,1180 @@
+components: {}
+info:
+  title: foobar-flask2
+  version: "0.1"
+openapi: 3.0.0
+paths:
+  /:
+    get:
+      operationId: root_GET
+      responses:
+        default:
+          description: Default response
+      x-name: root_GET
+      x-source: bin/utils/apiProxy.py~~56
+    head:
+      operationId: root_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: root_HEAD
+      x-source: bin/utils/apiProxy.py~~56
+    options:
+      operationId: root_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: root_OPTIONS
+      x-source: bin/utils/apiProxy.py~~56
+    x-name: root
+  /!/{any(css,dist,images,fonts):folder}/{filename}.{fileext}:
+    get:
+      operationId: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}_GET'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}_GET'
+      x-source: indico/web/assets/blueprint.py~~31
+    head:
+      operationId: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}_HEAD'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~31
+    options:
+      operationId: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}_OPTIONS'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~31
+    x-name: '!_{any(css,dist,images,fonts)}_{filename}.{fileext}'
+  /!/{any(images,fonts):folder}/{filename}__v{version}.{fileext}:
+    get:
+      operationId: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}_GET'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}_GET'
+      x-source: indico/web/assets/blueprint.py~~32
+    head:
+      operationId: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}_HEAD'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~32
+    options:
+      operationId: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}_OPTIONS'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~32
+    x-name: '!_{any(images,fonts)}_{filename}__v{version}.{fileext}'
+  /!/{filename}:
+    get:
+      operationId: '!_{filename}_GET'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{filename}_GET'
+      x-source: indico/web/assets/blueprint.py~~48
+    head:
+      operationId: '!_{filename}_HEAD'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{filename}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~48
+    options:
+      operationId: '!_{filename}_OPTIONS'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_{filename}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~48
+    x-name: '!_{filename}'
+  /!/favicon.ico:
+    get:
+      operationId: '!_favicon.ico_GET'
+      responses:
+        default:
+          description: Default response
+      x-name: '!_favicon.ico_GET'
+      x-source: indico/web/assets/blueprint.py~~125
+    head:
+      operationId: '!_favicon.ico_HEAD'
+      responses:
+        default:
+          description: Default response
+      x-name: '!_favicon.ico_HEAD'
+      x-source: indico/web/assets/blueprint.py~~125
+    options:
+      operationId: '!_favicon.ico_OPTIONS'
+      responses:
+        default:
+          description: Default response
+      x-name: '!_favicon.ico_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~125
+    x-name: '!_favicon.ico'
+  /!/static/custom/{any(css,js):folder}/{filename}:
+    get:
+      operationId: '!_static_custom_{any(css,js)}_{filename}_GET'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_custom_{any(css,js)}_{filename}_GET'
+      x-source: indico/web/assets/blueprint.py~~116
+    head:
+      operationId: '!_static_custom_{any(css,js)}_{filename}_HEAD'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_custom_{any(css,js)}_{filename}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~116
+    options:
+      operationId: '!_static_custom_{any(css,js)}_{filename}_OPTIONS'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_custom_{any(css,js)}_{filename}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~116
+    x-name: '!_static_custom_{any(css,js)}_{filename}'
+  /!/static/custom/files/{filename}:
+    get:
+      operationId: '!_static_custom_files_{filename}_GET'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_custom_files_{filename}_GET'
+      x-source: indico/web/assets/blueprint.py~~117
+    head:
+      operationId: '!_static_custom_files_{filename}_HEAD'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_custom_files_{filename}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~117
+    options:
+      operationId: '!_static_custom_files_{filename}_OPTIONS'
+      parameters:
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_custom_files_{filename}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~117
+    x-name: '!_static_custom_files_{filename}'
+  /!/static/plugins/{plugin}/{filename}.{fileext}:
+    get:
+      operationId: '!_static_plugins_{plugin}_{filename}.{fileext}_GET'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: plugin
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_plugins_{plugin}_{filename}.{fileext}_GET'
+      x-source: indico/web/assets/blueprint.py~~39
+    head:
+      operationId: '!_static_plugins_{plugin}_{filename}.{fileext}_HEAD'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: plugin
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_plugins_{plugin}_{filename}.{fileext}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~39
+    options:
+      operationId: '!_static_plugins_{plugin}_{filename}.{fileext}_OPTIONS'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: plugin
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_plugins_{plugin}_{filename}.{fileext}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~39
+    x-name: '!_static_plugins_{plugin}_{filename}.{fileext}'
+  /!/static/plugins/{plugin}/{filename}__v{version}.{fileext}:
+    get:
+      operationId: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}_GET'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: plugin
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}_GET'
+      x-source: indico/web/assets/blueprint.py~~38
+    head:
+      operationId: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}_HEAD'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: plugin
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}_HEAD'
+      x-source: indico/web/assets/blueprint.py~~38
+    options:
+      operationId: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}_OPTIONS'
+      parameters:
+      - in: path
+        name: fileext
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: filename
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: plugin
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      - in: path
+        name: version
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}_OPTIONS'
+      x-source: indico/web/assets/blueprint.py~~38
+    x-name: '!_static_plugins_{plugin}_{filename}__v{version}.{fileext}'
+  /{path}:
+    get:
+      operationId: '{path}_GET'
+      parameters:
+      - in: path
+        name: path
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '{path}_GET'
+      x-source: bin/utils/apiProxy.py~~61
+    post:
+      operationId: '{path}_POST'
+      parameters:
+      - in: path
+        name: path
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: '{path}_POST'
+      x-source: bin/utils/apiProxy.py~~61
+    x-name: '{path}'
+  /avatar/{name}.svg:
+    get:
+      operationId: avatar_{name}.svg_GET
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: avatar_{name}.svg_GET
+      x-source: indico/web/assets/blueprint.py~~130
+    head:
+      operationId: avatar_{name}.svg_HEAD
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: avatar_{name}.svg_HEAD
+      x-source: indico/web/assets/blueprint.py~~130
+    options:
+      operationId: avatar_{name}.svg_OPTIONS
+      parameters:
+      - in: path
+        name: name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: avatar_{name}.svg_OPTIONS
+      x-source: indico/web/assets/blueprint.py~~130
+    x-name: avatar_{name}.svg
+  /avatar/blank.svg:
+    get:
+      operationId: avatar_blank.svg_GET
+      responses:
+        default:
+          description: Default response
+      x-name: avatar_blank.svg_GET
+      x-source: indico/web/assets/blueprint.py~~131
+    head:
+      operationId: avatar_blank.svg_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: avatar_blank.svg_HEAD
+      x-source: indico/web/assets/blueprint.py~~131
+    options:
+      operationId: avatar_blank.svg_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: avatar_blank.svg_OPTIONS
+      x-source: indico/web/assets/blueprint.py~~131
+    x-name: avatar_blank.svg
+  /blocking/{blocking_id}:
+    get:
+      operationId: blocking_{blocking_id}_GET
+      parameters:
+      - in: path
+        name: blocking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: blocking_{blocking_id}_GET
+      x-source: indico/modules/rb/blueprint.py~~156
+    head:
+      operationId: blocking_{blocking_id}_HEAD
+      parameters:
+      - in: path
+        name: blocking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: blocking_{blocking_id}_HEAD
+      x-source: indico/modules/rb/blueprint.py~~156
+    options:
+      operationId: blocking_{blocking_id}_OPTIONS
+      parameters:
+      - in: path
+        name: blocking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: blocking_{blocking_id}_OPTIONS
+      x-source: indico/modules/rb/blueprint.py~~156
+    x-name: blocking_{blocking_id}
+  /booking/{booking_id}:
+    get:
+      operationId: booking_{booking_id}_GET
+      parameters:
+      - in: path
+        name: booking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: booking_{booking_id}_GET
+      x-source: indico/modules/rb/blueprint.py~~140
+    head:
+      operationId: booking_{booking_id}_HEAD
+      parameters:
+      - in: path
+        name: booking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: booking_{booking_id}_HEAD
+      x-source: indico/modules/rb/blueprint.py~~140
+    options:
+      operationId: booking_{booking_id}_OPTIONS
+      parameters:
+      - in: path
+        name: booking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: booking_{booking_id}_OPTIONS
+      x-source: indico/modules/rb/blueprint.py~~140
+    x-name: booking_{booking_id}
+  /booking/{booking_id}/cancel/{date}:
+    get:
+      operationId: booking_{booking_id}_cancel_{date}_GET
+      parameters:
+      - in: path
+        name: booking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      - in: path
+        name: date
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: booking_{booking_id}_cancel_{date}_GET
+      x-source: indico/modules/rb/blueprint.py~~145
+    head:
+      operationId: booking_{booking_id}_cancel_{date}_HEAD
+      parameters:
+      - in: path
+        name: booking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      - in: path
+        name: date
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: booking_{booking_id}_cancel_{date}_HEAD
+      x-source: indico/modules/rb/blueprint.py~~145
+    options:
+      operationId: booking_{booking_id}_cancel_{date}_OPTIONS
+      parameters:
+      - in: path
+        name: booking_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      - in: path
+        name: date
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: booking_{booking_id}_cancel_{date}_OPTIONS
+      x-source: indico/modules/rb/blueprint.py~~145
+    x-name: booking_{booking_id}_cancel_{date}
+  /i18n/{locale_name}-react.js:
+    get:
+      operationId: i18n_{locale_name}-react.js_GET
+      parameters:
+      - in: path
+        name: locale_name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: i18n_{locale_name}-react.js_GET
+      x-source: indico/web/assets/blueprint.py~~83
+    head:
+      operationId: i18n_{locale_name}-react.js_HEAD
+      parameters:
+      - in: path
+        name: locale_name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: i18n_{locale_name}-react.js_HEAD
+      x-source: indico/web/assets/blueprint.py~~83
+    options:
+      operationId: i18n_{locale_name}-react.js_OPTIONS
+      parameters:
+      - in: path
+        name: locale_name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: i18n_{locale_name}-react.js_OPTIONS
+      x-source: indico/web/assets/blueprint.py~~83
+    x-name: i18n_{locale_name}-react.js
+  /i18n/{locale_name}.js:
+    get:
+      operationId: i18n_{locale_name}.js_GET
+      parameters:
+      - in: path
+        name: locale_name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: i18n_{locale_name}.js_GET
+      x-source: indico/web/assets/blueprint.py~~78
+    head:
+      operationId: i18n_{locale_name}.js_HEAD
+      parameters:
+      - in: path
+        name: locale_name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: i18n_{locale_name}.js_HEAD
+      x-source: indico/web/assets/blueprint.py~~78
+    options:
+      operationId: i18n_{locale_name}.js_OPTIONS
+      parameters:
+      - in: path
+        name: locale_name
+        required: true
+        schema:
+          type: string
+          x-field-kind: normal
+          x-field-original-type: builtin.str
+          x-field-type: string
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: i18n_{locale_name}.js_OPTIONS
+      x-source: indico/web/assets/blueprint.py~~78
+    x-name: i18n_{locale_name}.js
+  /js-vars/global.js:
+    get:
+      operationId: js-vars_global.js_GET
+      responses:
+        default:
+          description: Default response
+      x-name: js-vars_global.js_GET
+      x-source: indico/web/assets/blueprint.py~~54
+    head:
+      operationId: js-vars_global.js_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: js-vars_global.js_HEAD
+      x-source: indico/web/assets/blueprint.py~~54
+    options:
+      operationId: js-vars_global.js_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: js-vars_global.js_OPTIONS
+      x-source: indico/web/assets/blueprint.py~~54
+    x-name: js-vars_global.js
+  /js-vars/user.js:
+    get:
+      operationId: js-vars_user.js_GET
+      responses:
+        default:
+          description: Default response
+      x-name: js-vars_user.js_GET
+      x-source: indico/web/assets/blueprint.py~~69
+    head:
+      operationId: js-vars_user.js_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: js-vars_user.js_HEAD
+      x-source: indico/web/assets/blueprint.py~~69
+    options:
+      operationId: js-vars_user.js_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: js-vars_user.js_OPTIONS
+      x-source: indico/web/assets/blueprint.py~~69
+    x-name: js-vars_user.js
+  /my-bookings:
+    get:
+      operationId: my-bookings_GET
+      responses:
+        default:
+          description: Default response
+      x-name: my-bookings_GET
+      x-source: indico/modules/rb/blueprint.py~~151
+    head:
+      operationId: my-bookings_HEAD
+      responses:
+        default:
+          description: Default response
+      x-name: my-bookings_HEAD
+      x-source: indico/modules/rb/blueprint.py~~151
+    options:
+      operationId: my-bookings_OPTIONS
+      responses:
+        default:
+          description: Default response
+      x-name: my-bookings_OPTIONS
+      x-source: indico/modules/rb/blueprint.py~~151
+    x-name: my-bookings
+  /room/{room_id}:
+    get:
+      operationId: room_{room_id}_GET
+      parameters:
+      - in: path
+        name: room_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: room_{room_id}_GET
+      x-source: indico/modules/rb/blueprint.py~~135
+    head:
+      operationId: room_{room_id}_HEAD
+      parameters:
+      - in: path
+        name: room_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: room_{room_id}_HEAD
+      x-source: indico/modules/rb/blueprint.py~~135
+    options:
+      operationId: room_{room_id}_OPTIONS
+      parameters:
+      - in: path
+        name: room_id
+        required: true
+        schema:
+          format: int32
+          type: integer
+          x-field-kind: normal
+          x-field-original-type: builtin.int
+          x-field-type: integer
+        x-category: path parameter
+      responses:
+        default:
+          description: Default response
+      x-name: room_{room_id}_OPTIONS
+      x-source: indico/modules/rb/blueprint.py~~135
+    x-name: room_{room_id}
+servers:
+- description: Default server
+  url: https://127.0.0.1:5000
